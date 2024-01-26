@@ -275,7 +275,7 @@ def parse_blastp(blastp_url, new_blastp_url, query_rawbits_map, lookup_mat, Lamb
                 hit_index = np.argmin(np.fabs(lookup_keys - s_hat_key))
                 sg_pvalue = lookup_mat[hit_index, 1]
                 # print('sg_pvalue={}'.format(sg_pvalue))
-                line = line + "\t{}".format(sg_pvalue)
+                line = line + "\t{:.3f}".format(sg_pvalue)
 
             out_file.write("{}\n".format(line))
 
